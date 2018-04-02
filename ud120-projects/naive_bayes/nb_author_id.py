@@ -22,10 +22,7 @@ from sklearn.metrics import accuracy_score
 ### and testing datasets, respectively
 ### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
-gnb=GaussianNB()
-gnb=gnb.fit(features_train,labels_train)
-pred=gnb.predict(features_test)
-acc=accuracy_score(pred,labels_test)
+
 
 
 
@@ -36,5 +33,8 @@ acc=accuracy_score(pred,labels_test)
 
 
 #########################################################
-
+gnb=GaussianNB()
+gnb=gnb.fit(features_train,labels_train)
+pred=gnb.predict(features_test)
+acc=accuracy_score(pred,labels_test)
 
