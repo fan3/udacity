@@ -16,7 +16,18 @@
 """
 
 import pickle
+from collections import Counter
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
+print("The length of enron:",len(enron_data))
+print("The features of each person",len(enron_data[enron_data.keys()[0]]))
+a=0
+for list in enron_data.keys():
+    if enron_data[list]['poi']==1:
+        a=a+1
+print("The NO. of POI",a)
+print("James Prentice's stocks is:",enron_data['PRENTICE JAMES']['total_stock_value'])
+print("'COLWELL WESLEY's sending mails is:",enron_data['COLWELL WESLEY']['from_this_person_to_poi'])
+print(enron_data['SKILLING JEFFREY K'].keys())
 
 
